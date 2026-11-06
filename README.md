@@ -36,7 +36,7 @@ or-verifier/
 ├── pyproject.toml              # pytest config
 ├── .env.example                # copy to .env and add ANTHROPIC_API_KEY
 ├── .gitignore
-├── ci.yml                      # optional GitHub Actions workflow (see header inside)
+├── .github/workflows/ci.yml       # GitHub Actions workflow (see header inside)
 ├── src/orverifier/
 │   ├── problems.py             # 8 families: generator + checker + exact HiGHS reference
 │   ├── sandbox.py              # static AST check + subprocess runner with limits
