@@ -1,0 +1,11 @@
+# Core (evaluation harness, verifier, tests) - runs on any laptop, no GPU
+numpy>=1.26
+scipy>=1.11          # scipy.optimize.milp (HiGHS) is the reference solver
+matplotlib>=3.8
+pytest>=7.4
+
+# Candidate programs may use PuLP (allowed in the sandbox)
+pulp>=2.8
+
+# Only needed to evaluate Claude via the API
+anthropic>=0.40

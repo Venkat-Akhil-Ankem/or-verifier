@@ -1,0 +1,24 @@
+# OPTIONAL. To enable CI, this file must live at  .github/workflows/ci.yml  in your repo.
+# Easiest way: on github.com open your repo -> "Add file" -> "Create new file", type
+#   .github/workflows/ci.yml
+# in the name box (typing the slashes creates the folders), paste this content, commit.
+# Afterwards delete this root-level copy.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install numpy scipy matplotlib pytest
+      - run: pytest -q
+      - run: python scripts/selftest.py

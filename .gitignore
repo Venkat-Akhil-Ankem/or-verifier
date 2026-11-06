@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.env
+.cache/
+outputs/
+grpo/train.jsonl
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store

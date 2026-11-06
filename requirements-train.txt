@@ -1,0 +1,10 @@
+# Only for GRPO training / evaluating local models (needs a CUDA GPU).
+# Written against the TRL GRPOTrainer API (TRL >= 0.15). If an argument name has
+# changed in your version, adjust grpo/train_grpo.py accordingly.
+-r requirements.txt
+torch>=2.3
+transformers>=4.46
+trl>=0.15
+peft>=0.12
+datasets>=2.20
+accelerate>=0.34

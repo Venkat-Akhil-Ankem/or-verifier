@@ -1,0 +1,10 @@
+[project]
+name = "or-verifier"
+version = "0.1.0"
+description = "Solver-verified evaluation and verifiable RL rewards for LLM optimisation modelling"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "matplotlib"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
